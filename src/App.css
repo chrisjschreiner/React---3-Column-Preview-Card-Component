@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* paragraphs */
+
+:root {
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* background, headings, buttons */
+
+:root {
+  --Very-light-gray: hsl(0, 0%, 95%);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-size: 15px;
+  background-color: var(--Very-light-gray);
+}
+
+.container {
+  padding-top: 130px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.card1 {
+  width: 355px;
+  height: 560px;
+  background-color: var(--Bright-orange);
+  border-radius: 12px 0px 0px 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.card2 {
+  width: 355px;
+  height: 560px;
+  background-color: var(--Dark-cyan);
+}
+
+.card3 {
+  width: 355px;
+  height: 560px;
+  background-color: var(--Very-dark-cyan);
+  border-radius: 0px 12px 12px 0px;
+}
+
+.content {
+  width: 230px;
+  padding-left: 50px;
+  padding-top: 55px;
+}
+
+p {
+  font-family: 'Lexend Deca', sans-serif;
+  color: var(--Transparent-white);
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+h1 {
+  font-family: 'Big Shoulders Display', cursive;
+  color: var(--Very-light-gray);
+  font-size: 40px;
+}
+
+.btn {
+  border-radius: 25px;
+  border: 2px solid var(--Very-light-gray);
+  padding: 15px 40px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: medium;
+  margin-top: 90px;
+}
+.btn1 {
+  color: var(--Bright-orange);
+}
+
+.btn1:hover {
+  background-color: var(--Bright-orange);
+  color: var(--Very-light-gray);
+  border: 2px solid var(--Very-light-gray);
+  cursor: pointer;
+}
+
+.btn2 {
+  color: var(--Dark-cyan);
+}
+
+.btn2:hover {
+  background-color: var(--Dark-cyan);
+  color: var(--Very-light-gray);
+  border: 2px solid var(--Very-light-gray);
+  cursor: pointer;
+}
+
+.btn3 {
+  color: var(--Very-dark-cyan);
+}
+
+.btn3:hover {
+  background-color: var(--Very-dark-cyan);
+  color: var(--Very-light-gray);
+  border: 2px solid var(--Very-light-gray);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 723px) {
+  .card1 {
+    border-radius: 12px 12px 0px 0px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 723px) {
+  .card3 {
+    border-radius: 0px 0px 12px 12px;
   }
 }
